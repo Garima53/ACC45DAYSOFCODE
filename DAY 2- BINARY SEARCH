@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int i,n,a[100],key,flag = 0;
+cout<<"Enter the size of array: ";
+cin>>n;
+cout<<"Enter the values in array:"<<endl;
+    for ( i = 0; i < n; i++)
+     {
+      cin>>a[i];
+     }
+cout<<"Entered values by user:"<<endl;
+    for ( i = 0; i < n; i++)
+     {
+      cout<<a[i]<<endl;
+     }
+cout<<"Enter the value you want to search: ";
+cin>>key;
+ int mid,loc=-1;
+ int B=0, E = n-1;
+ while (B <= E){
+    mid = B+(E-B)/2;
+    if(a[mid]==key){
+     loc = mid;
+     break;
+     }
+    else if(a[mid]<key)
+      B = mid + 1;
+    else{ 
+    E = mid - 1;}
+
+ }
+ cout<<loc;
+ 
+}
